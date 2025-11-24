@@ -4,7 +4,6 @@
     class="w-full min-h-screen flex justify-center items-center bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
   >
     <div class="flex flex-col justify-center items-center gap-6 px-4">
-      <!-- avatar + gradient border -->
       <div
         class="relative p-[3px] rounded-full bg-gradient-to-tr from-pink-500 via-purple-500 to-sky-500 shadow-xl shadow-sky-900/40"
       >
@@ -12,7 +11,6 @@
           class="w-36 h-36 bg-[url('@/assets/images/me.jpg')] bg-center bg-cover rounded-full"
         ></div>
 
-        <!-- name badge with gradient text -->
         <span
           class="absolute -right-5 bottom-5 rounded-xl border border-white/10 px-4 py-1.5 bg-slate-900/80 backdrop-blur text-[10px] font-semibold uppercase tracking-wide transform -rotate-12 shadow-lg"
         >
@@ -48,7 +46,7 @@
           <li>
             <a
               class="p-2 flex justify-center items-center rounded-full border border-white/50 hover:border-pink-500 hover:bg-pink-500/10 transition"
-              href=""
+              href="https://instagram.com/i.karakhanli"
             >
               <Instagram class="w-5 h-5 text-pink-600" />
             </a>
@@ -56,7 +54,7 @@
           <li>
             <a
               class="p-2 flex justify-center items-center rounded-full border border-white hover:border-sky-500 hover:bg-sky-500/10 transition"
-              href=""
+              href="https://www.linkedin.com/in/inal-karakhanli/"
             >
               <Linkedin class="w-5 h-5 text-blue-400" />
             </a>
@@ -64,7 +62,7 @@
           <li>
             <a
               class="p-2 flex justify-center items-center rounded-full border border-white hover:border-zinc-900 hover:bg-zinc-900/10 transition"
-              href=""
+              href="https://github.com/nickforhuman"
             >
               <Github class="w-5 h-5 text-gray-400" />
             </a>
@@ -110,7 +108,7 @@
           <div
             class="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center text-[11px] tracking-[0.2em] text-slate-500"
           >
-            PROJECT PREVIEW
+            <img :src="card.image" alt="" />
           </div>
 
           <div class="p-4 flex flex-col gap-3">
@@ -182,36 +180,13 @@ import { ref } from 'vue'
 
 const webCardItems = ref([
   {
-    title: 'Economirror',
-    projecttype: 'SaaS',
-    desc: 'Real-time crypto analytics platform with custom indicators, AI-driven insights and responsive admin UI.',
-    tech: ['Vue.js', 'Tailwindcss', 'Rust'],
-    link: 'https://economirror.com',
-    githublink: 'https://github.com/economirror-main/',
-  },
-  {
-    title: 'Economirror',
-    projecttype: 'SaaS',
-    desc: 'Real-time crypto analytics platform with custom indicators, AI-driven insights and responsive admin UI.',
-    tech: ['Vue.js', 'Tailwindcss', 'Rust'],
-    link: 'https://economirror.com',
-    githublink: 'https://github.com/economirror-main/',
-  },
-  {
-    title: 'Economirror',
-    projecttype: 'SaaS',
-    desc: 'Real-time crypto analytics platform with custom indicators, AI-driven insights and responsive admin UI.',
-    tech: ['Vue.js', 'Tailwindcss', 'Rust'],
-    link: 'https://economirror.com',
-    githublink: 'https://github.com/economirror-main/',
-  },
-  {
-    title: 'Economirror',
-    projecttype: 'SaaS',
-    desc: 'Real-time crypto analytics platform with custom indicators, AI-driven insights and responsive admin UI.',
-    tech: ['Vue.js', 'Tailwindcss', 'Rust'],
-    link: 'https://economirror.com',
-    githublink: 'https://github.com/economirror-main/',
+    image: new URL('@/assets/images/portfolio/newser.png', import.meta.url).href,
+    title: 'NEWSER',
+    projecttype: 'Blog',
+    desc: 'A dynamic news platform where you can follow the latest stories, trending topics, and in-depth analyses all in one modern, easy-to-use website.',
+    tech: ['Vue.js', 'Tailwindcss'],
+    link: 'https://newser-k3mx.onrender.com/',
+    githublink: 'https://github.com/nickforhuman/newser',
   },
 ])
 </script>
