@@ -1,0 +1,12 @@
+/* slide animation  */
+.slide-enter-active,
+.slide-leave-active {
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
