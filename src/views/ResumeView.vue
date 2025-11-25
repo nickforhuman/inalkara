@@ -69,7 +69,7 @@
         <div
           class="md:col-span-2 rounded-2xl border border-slate-200 bg-white/90 backdrop-blur-lg p-5 shadow-sm"
         >
-          <h2 class="text-sm font-semibold text-secondary mb-2 flex items-center gap-2">
+          <h2 class="text-sm font-semibold text-primary mb-2 flex items-center gap-2">
             <Sparkles class="w-4 h-4" />
             Summary
           </h2>
@@ -84,7 +84,7 @@
           data-resume
           class="rounded-2xl border border-slate-200 bg-white/90 backdrop-blur-lg p-5 flex flex-col gap-3 shadow-sm"
         >
-          <h2 class="text-sm font-semibold text-secondary mb-1 flex items-center gap-2">
+          <h2 class="text-sm font-semibold text-primary mb-1 flex items-center gap-2">
             <Star class="w-4 h-4" />
             Highlights
           </h2>
@@ -99,7 +99,7 @@
 
       <div data-resume class="grid md:grid-cols-3 gap-6">
         <div class="md:col-span-2 space-y-4">
-          <h2 class="text-sm font-semibold text-secondary flex items-center gap-2">
+          <h2 class="text-sm font-semibold text-primary flex items-center gap-2">
             <Briefcase class="w-4 h-4" />
             Experience
           </h2>
@@ -146,7 +146,7 @@
           <div
             class="rounded-2xl border border-slate-200 bg-white/90 backdrop-blur-lg p-4 space-y-3 shadow-sm"
           >
-            <h2 class="text-sm font-semibold text-secondary flex items-center gap-2">
+            <h2 class="text-sm font-semibold text-primary flex items-center gap-2">
               <Code2 class="w-4 h-4" />
               Tech stack
             </h2>
@@ -169,7 +169,7 @@
           <div
             class="rounded-2xl border border-slate-200 bg-white/90 backdrop-blur-lg p-4 space-y-2 shadow-sm"
           >
-            <h2 class="text-sm font-semibold text-secondary flex items-center gap-2">
+            <h2 class="text-sm font-semibold text-primary flex items-center gap-2">
               <GraduationCap class="w-4 h-4" />
               Education
             </h2>
