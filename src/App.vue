@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import NavigationComponent from './components/NavigationComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import NavigationComponent from './components/NavigationComponent.vue'
       <NavigationComponent />
     </header>
     <RouterView />
+    <FooterComponent />
   </main>
 </template>
 
