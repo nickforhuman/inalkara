@@ -22,6 +22,13 @@ const router = createRouter({
       component: ResumeView,
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+
+    return { left: 0, top: 0 }
+  },
 })
 
 export default router
