@@ -2,7 +2,7 @@
   <section class="w-full flex flex-col justify-center items-center min-h-screen bg-slate-950/90">
     <div class="max-w-5xl mx-auto px-4 py-16">
       <div class="grid md:grid-cols-2 grid-cols-1 gap-10">
-        <div class="flex flex-col gap-6">
+        <div data-contact class="flex flex-col gap-6">
           <div>
             <h1 class="text-3xl md:text-4xl font-bold text-secondary mb-2">
               Let’s build something together
@@ -14,6 +14,7 @@
           </div>
 
           <div
+            data-contact
             class="rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-lg p-4 flex items-center gap-4 hover:border-secondary/70 hover:-translate-y-0.5 transition"
           >
             <div
@@ -33,6 +34,7 @@
           </div>
 
           <div
+            data-contact
             class="rounded-2xl border border-emerald-700/60 bg-emerald-900/20 backdrop-blur-lg p-4 flex items-center gap-4 hover:border-emerald-400/80 hover:-translate-y-0.5 transition"
           >
             <div
@@ -56,7 +58,7 @@
             </div>
           </div>
 
-          <p class="text-[11px] text-slate-500">
+          <p data-contact class="text-[11px] text-slate-500">
             Prefer another channel? Feel free to DM me on any of the social platforms on the right.
           </p>
         </div>
@@ -65,7 +67,7 @@
           <div
             class="rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-lg p-5 flex flex-col gap-4"
           >
-            <div class="flex items-center justify-between">
+            <div data-contact class="flex items-center justify-between">
               <h2 class="text-lg font-semibold text-secondary">Social media</h2>
               <span
                 class="text-[11px] px-2 py-1 rounded-full border border-slate-700 text-slate-300"
@@ -75,7 +77,7 @@
             </div>
 
             <ul class="space-y-2">
-              <li>
+              <li data-contact>
                 <a
                   href="https://instagram.com/i.karakhanli"
                   target="_blank"
@@ -97,7 +99,7 @@
                 </a>
               </li>
 
-              <li>
+              <li data-contact>
                 <a
                   href="https://www.linkedin.com/in/inal-karakhanli/"
                   target="_blank"
@@ -117,7 +119,7 @@
                 </a>
               </li>
 
-              <li>
+              <li data-contact>
                 <a
                   href="https://github.com/nickforhuman"
                   target="_blank"
@@ -140,6 +142,7 @@
           </div>
 
           <div
+            data-contact
             class="rounded-2xl border border-slate-800 bg-gradient-to-tr from-slate-900 via-slate-900 to-slate-800 p-4 flex items-center gap-3"
           >
             <div
@@ -160,4 +163,28 @@
 
 <script setup lang="ts">
 import { Mail, Phone, Instagram, Linkedin, Github, Send, MapPin } from 'lucide-vue-next'
+import { onMounted, onBeforeUnmount } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+  const contactElements = gsap.utils.toArray<HTMLElement>('[data-contact]')
+  contactElements.forEach((el, i) => {
+    gsap.fromTo(
+      el,
+      { y: 50, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        delay: i * 0.2,
+        scrollTrigger: { trigger: el, start: 'top 80%', toggleActions: 'play none none reverse' },
+      },
+    )
+  })
+})
+onBeforeUnmount(() => {
+  ScrollTrigger.getAll().forEach((t) => t.kill())
+})
 </script>
