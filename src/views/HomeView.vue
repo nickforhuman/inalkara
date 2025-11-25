@@ -79,6 +79,7 @@
 </template>
 
 <script setup lang="ts">
+import { Github, Instagram, Linkedin } from 'lucide-vue-next'
 import PortfolioComponent from '@/components/PortfolioComponent.vue'
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
