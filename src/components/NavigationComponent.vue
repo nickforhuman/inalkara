@@ -1,11 +1,12 @@
 <template>
   <!-- top nav -->
   <nav
+    data-navigation
     class="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl"
   >
     <div class="max-w-5xl mx-auto px-4 flex justify-between md:justify-between items-center py-2">
       <!-- logo start  -->
-      <div class="flex items-center gap-2">
+      <div data-navigation class="flex items-center gap-2">
         <img
           src="@/assets/images/logo/logo.png"
           class="w-10 h-10 bg-secondary p-1.5 rounded-2xl shadow-lg shadow-secondary/30"
@@ -19,7 +20,7 @@
 
       <!-- desktop nav -->
       <div class="hidden md:flex justify-center items-center">
-        <ul class="flex justify-center items-center gap-2 m-2">
+        <ul data-navigation class="flex justify-center items-center gap-2 m-2">
           <li>
             <router-link
               class="px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide text-secondary/90 hover:text-secondary bg-transparent hover:bg-secondary/10 transition-all"
@@ -48,7 +49,7 @@
       </div>
 
       <!-- mobile menu button -->
-      <div class="md:hidden flex justify-center items-center m-1">
+      <div data-navigation class="md:hidden flex justify-center items-center m-1">
         <button
           @click="sidebarToggle()"
           class="inline-flex items-center justify-center px-3 py-2 bg-secondary/20 border border-secondary/30 backdrop-blur-md rounded-3xl active:scale-95 transition"
@@ -144,11 +145,36 @@
 
 <script setup lang="ts">
 import { Ellipsis, MoveLeft } from 'lucide-vue-next'
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 
 const isSidebar = ref(false)
 
 const sidebarToggle = () => {
   isSidebar.value = !isSidebar.value
 }
+
+onMounted(() => {
+  const navigationElements = gsap.utils.toArray<HTMLElement>('[data-navigation]')
+
+  navigationElements.forEach((el, i) => {
+    gsap.fromTo(
+      el,
+      { y: 50, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        delay: i * 0.2,
+        scrollTrigger: { trigger: el, start: 'top 80%', toggleActions: 'play none none reverse' },
+      },
+    )
+  })
+})
+
+onBeforeUnmount(() => {
+  ScrollTrigger.getAll().forEach((t) => t.kill())
+})
 </script>

@@ -5,15 +5,15 @@
   >
     <div class="flex flex-col justify-center items-center gap-6 px-4">
       <div
+        data-intro
         class="relative p-[3px] rounded-full bg-gradient-to-tr from-pink-500 via-purple-500 to-sky-500 shadow-xl shadow-sky-900/40"
       >
         <div
-          id="intro"
           class="w-36 h-36 bg-[url('@/assets/images/me.jpg')] bg-center bg-cover rounded-full"
         ></div>
 
         <span
-          id="intro"
+          data-intro
           class="absolute -right-5 bottom-5 rounded-xl border border-white/10 px-4 py-1.5 bg-slate-900/80 backdrop-blur text-[10px] font-semibold uppercase tracking-wide transform -rotate-12 shadow-lg"
         >
           <span class="bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">
@@ -25,7 +25,7 @@
       <!-- headline -->
       <div>
         <h1
-          id="intro"
+          data-intro
           class="max-w-xl text-center text-secondary text-2xl md:text-3xl font-bold leading-relaxed"
         >
           Building
@@ -37,7 +37,7 @@
       </div>
 
       <div>
-        <ul id="intro" class="flex justify-center items-center gap-3 py-6">
+        <ul data-intro class="flex justify-center items-center gap-3 py-6">
           <li>
             <a
               class="px-2 font-bold py-2 w-40 inline-flex justify-center items-center rounded-3xl bg-secondary text-base-100 font-medium shadow-md hover:shadow-lg hover:-translate-y-0.5 transition"
@@ -81,18 +81,35 @@
 <script setup lang="ts">
 import { Github, Instagram, Linkedin } from 'lucide-vue-next'
 import PortfolioComponent from '@/components/PortfolioComponent.vue'
-import { onMounted } from 'vue'
+import { onMounted, onBeforeUnmount } from 'vue'
 import { gsap } from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
-  const introSelector = gsap.utils.toArray('#intro')
-  introSelector.forEach((introItem: any, i) => {
-    introItem.fromTo(
+  const introElements = gsap.utils.toArray<HTMLElement>('[data-intro]')
+
+  introElements.forEach((el, i) => {
+    gsap.fromTo(
+      el,
       { y: 50, opacity: 0 },
-      { ScrollTrigger: introItem, duration: 1, delay: i * 0.2, y: 0, opacity: 1 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        delay: i * 0.2,
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+        },
+      },
     )
   })
+})
+
+onBeforeUnmount(() => {
+  ScrollTrigger.getAll().forEach((t) => t.kill())
 })
 </script>
