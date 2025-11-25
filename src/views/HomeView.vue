@@ -40,7 +40,7 @@
         <ul data-intro class="flex justify-center items-center gap-3 py-6">
           <li>
             <a
-              class="px-2 font-bold py-2 w-40 inline-flex justify-center items-center rounded-3xl bg-secondary text-white font-medium shadow-md hover:shadow-lg hover:-translate-y-0.5 transition"
+              class="px-2 font-bold py-2 w-40 inline-flex justify-center text-primary items-center rounded-3xl bg-secondary font-medium shadow-md hover:shadow-lg hover:-translate-y-0.5 transition"
               href="/"
             >
               Fullstack Engineer
