@@ -1,8 +1,8 @@
 <template>
   <section class="w-full flex flex-col justify-center items-center min-h-screen bg-slate-950/90">
     <div class="max-w-5xl mx-auto px-4 py-16">
-      <div class="grid md:grid-cols-2 grid-cols-1 gap-10">
-        <div data-contact class="flex flex-col gap-6">
+      <div data-contact class="grid md:grid-cols-2 grid-cols-1 gap-10">
+        <div class="flex flex-col gap-6">
           <div>
             <h1 class="text-3xl md:text-4xl font-bold text-secondary mb-2">
               Let’s build something together
@@ -14,7 +14,6 @@
           </div>
 
           <div
-            data-contact
             class="rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-lg p-4 flex items-center gap-4 hover:border-secondary/70 hover:-translate-y-0.5 transition"
           >
             <div
@@ -34,7 +33,6 @@
           </div>
 
           <div
-            data-contact
             class="rounded-2xl border border-emerald-700/60 bg-emerald-900/20 backdrop-blur-lg p-4 flex items-center gap-4 hover:border-emerald-400/80 hover:-translate-y-0.5 transition"
           >
             <div
@@ -58,7 +56,7 @@
             </div>
           </div>
 
-          <p data-contact class="text-[11px] text-slate-500">
+          <p class="text-[11px] text-slate-500">
             Prefer another channel? Feel free to DM me on any of the social platforms on the right.
           </p>
         </div>
@@ -76,8 +74,8 @@
               </span>
             </div>
 
-            <ul class="space-y-2">
-              <li data-contact>
+            <ul data-contact class="space-y-2">
+              <li>
                 <a
                   href="https://instagram.com/i.karakhanli"
                   target="_blank"
@@ -99,7 +97,7 @@
                 </a>
               </li>
 
-              <li data-contact>
+              <li>
                 <a
                   href="https://www.linkedin.com/in/inal-karakhanli/"
                   target="_blank"
@@ -119,7 +117,7 @@
                 </a>
               </li>
 
-              <li data-contact>
+              <li>
                 <a
                   href="https://github.com/nickforhuman"
                   target="_blank"

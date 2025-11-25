@@ -1,25 +1,24 @@
 <template>
   <section class="w-full flex flex-col justify-center items-center min-h-screen bg-slate-950/90">
     <div class="max-w-5xl mx-auto px-4 py-16 space-y-8">
-      <header class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <header
+        data-resume
+        class="flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+      >
         <div class="flex items-center gap-4">
           <div
-            data-resume
             class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-pink-500 via-purple-500 to-sky-500 p-[2px]"
           >
             <div
               class="w-full h-full rounded-2xl bg-[url('@/assets/images/me.jpg')] bg-center bg-cover"
             ></div>
           </div>
-          <div>
-            <h1 data-resume class="text-2xl md:text-3xl font-bold text-secondary">İnal Garali</h1>
-            <p data-resume class="text-sm text-slate-300">
+          <div data-resume>
+            <h1 class="text-2xl md:text-3xl font-bold text-secondary">İnal Garali</h1>
+            <p class="text-sm text-slate-300">
               Full-stack Developer · Web & Mobile · Expert Systems · Automation
             </p>
-            <div
-              data-resume
-              class="mt-1 flex flex-wrap items-center gap-2 text-[11px] text-slate-400"
-            >
+            <div class="mt-1 flex flex-wrap items-center gap-2 text-[11px] text-slate-400">
               <span class="inline-flex items-center gap-1">
                 <MapPin class="w-3 h-3" />
                 Türkiye · Remote
@@ -66,15 +65,15 @@
         </div>
       </header>
 
-      <div class="grid md:grid-cols-3 gap-6">
+      <div data-resume class="grid md:grid-cols-3 gap-6">
         <div
           class="md:col-span-2 rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-lg p-5"
         >
-          <h2 data-resume class="text-sm font-semibold text-secondary mb-2 flex items-center gap-2">
+          <h2 class="text-sm font-semibold text-secondary mb-2 flex items-center gap-2">
             <Sparkles class="w-4 h-4" />
             Summary
           </h2>
-          <p data-resume class="text-sm text-slate-300 leading-relaxed">
+          <p class="text-sm text-slate-300 leading-relaxed">
             I’m a full-stack developer focused on building modern web & mobile applications, expert
             systems and business automations. Strong background with Vue, Rust backends, Tailwind UI
             and data-driven products (crypto analytics, dashboards, internal tools).
@@ -82,13 +81,14 @@
         </div>
 
         <div
+          data-resume
           class="rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-lg p-5 flex flex-col gap-3"
         >
-          <h2 data-resume class="text-sm font-semibold text-secondary mb-1 flex items-center gap-2">
+          <h2 class="text-sm font-semibold text-secondary mb-1 flex items-center gap-2">
             <Star class="w-4 h-4" />
             Highlights
           </h2>
-          <ul data-resume class="space-y-1.5 text-[12px] text-slate-300">
+          <ul class="space-y-1.5 text-[12px] text-slate-300">
             <li>• Crypto & finance-oriented dashboards (Economirror)</li>
             <li>• Legal service & booking platforms (Legium)</li>
             <li>• Food ordering & e-commerce (WooFood)</li>
@@ -97,15 +97,14 @@
         </div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6">
+      <div data-resume class="grid md:grid-cols-3 gap-6">
         <div class="md:col-span-2 space-y-4">
-          <h2 data-resume class="text-sm font-semibold text-secondary flex items-center gap-2">
+          <h2 class="text-sm font-semibold text-secondary flex items-center gap-2">
             <Briefcase class="w-4 h-4" />
             Experience
           </h2>
 
           <div
-            data-resume
             v-for="(item, index) in experiences"
             :key="index"
             class="relative pl-5 pb-5 border-l border-slate-800 last:pb-0"
@@ -143,9 +142,8 @@
           </div>
         </div>
 
-        <div class="space-y-4">
+        <div data-resume class="space-y-4">
           <div
-            data-resume
             class="rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-lg p-4 space-y-3"
           >
             <h2 class="text-sm font-semibold text-secondary flex items-center gap-2">
@@ -169,7 +167,6 @@
           </div>
 
           <div
-            data-resume
             class="rounded-2xl border border-slate-800 bg-slate-900/70 backdrop-blur-lg p-4 space-y-2"
           >
             <h2 class="text-sm font-semibold text-secondary flex items-center gap-2">
@@ -188,7 +185,6 @@
           </div>
 
           <div
-            data-resume
             class="rounded-2xl border border-emerald-700/60 bg-emerald-900/20 backdrop-blur-lg p-4 flex items-center gap-3"
           >
             <div
