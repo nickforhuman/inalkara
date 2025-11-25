@@ -137,7 +137,6 @@
   </section>
   <!-- portfolio end  -->
 </template>
-
 <script setup lang="ts">
 import { Github, FolderKanban, ExternalLink } from 'lucide-vue-next'
 import { ref, computed } from 'vue'
@@ -148,11 +147,24 @@ const categories = [
   { id: 'mobile', label: 'Mobile applications' },
   { id: 'expert', label: 'Expert systems' },
   { id: 'automation', label: 'Business automations' },
-]
+] as const
 
-const selectedCategory = ref<'all' | 'web' | 'mobile' | 'expert' | 'automation'>('all')
+type CategoryId = (typeof categories)[number]['id']
 
-const projects = ref([
+const selectedCategory = ref<CategoryId>('all')
+
+const projects = ref<
+  Array<{
+    image: string
+    title: string
+    projecttype: string
+    category: CategoryId
+    desc: string
+    tech: string[]
+    link?: string
+    githublink?: string
+  }>
+>([
   {
     image: new URL('@/assets/images/portfolio/newser.png', import.meta.url).href,
     title: 'NEWSER',
