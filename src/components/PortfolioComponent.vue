@@ -1,21 +1,21 @@
 <template>
   <!-- portfolio start  -->
-  <section id="projects" class="w-full py-12 bg-slate-950/80">
+  <section id="projects" class="w-full py-12 bg-slate-50">
     <div class="max-w-5xl mx-auto px-4">
       <!-- header start  -->
       <div class="flex justify-between items-end gap-4 mb-6">
         <div class="flex items-center gap-3">
           <div class="p-2 rounded-xl bg-gradient-to-tr from-pink-500 via-purple-500 to-sky-500/80">
-            <Globe class="w-6 h-6 text-slate-950" />
+            <Globe class="w-6 h-6 text-white" />
           </div>
           <div>
-            <h1 class="text-2xl md:text-3xl font-bold text-secondary">Web Projects</h1>
-            <p class="text-sm text-slate-400">Selected client work & personal builds</p>
+            <h1 class="text-2xl md:text-3xl font-bold text-slate-900">Web Projects</h1>
+            <p class="text-sm text-slate-500">Selected client work & personal builds</p>
           </div>
         </div>
 
         <span
-          class="hidden md:inline-flex items-center text-xs px-3 py-1 rounded-full border border-slate-700 text-slate-300"
+          class="hidden md:inline-flex items-center text-xs px-3 py-1 rounded-full border border-slate-200 text-slate-500 bg-white/80"
         >
           <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2"></span>
           Available for freelance work
@@ -29,28 +29,28 @@
         <article
           v-for="(card, index) in webCardItems"
           :key="index"
-          class="group relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur shadow-lg hover:shadow-xl hover:-translate-y-1 transition"
+          class="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white/90 backdrop-blur shadow-md hover:shadow-lg hover:-translate-y-1 transition"
         >
           <!-- preview alanı -->
           <div
-            class="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center text-[11px] tracking-[0.2em] text-slate-500"
+            class="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-[11px] tracking-[0.2em] text-slate-400"
           >
-            <img :src="card.image" alt="" />
+            <img :src="card.image" alt="" class="w-full h-full object-cover" />
           </div>
 
           <div class="p-4 flex flex-col gap-3">
             <div class="flex items-center justify-between gap-2">
-              <h2 class="font-semibold text-secondary text-lg">
+              <h2 class="font-semibold text-slate-900 text-lg">
                 {{ card.title }}
               </h2>
               <span
-                class="text-[10px] px-2 py-1 rounded-full bg-slate-800 text-slate-300 uppercase tracking-wide"
+                class="text-[10px] px-2 py-1 rounded-full bg-slate-100 text-slate-600 uppercase tracking-wide"
               >
                 {{ card.projecttype }}
               </span>
             </div>
 
-            <p class="text-sm text-slate-300">
+            <p class="text-sm text-slate-700">
               {{ card.desc }}
             </p>
 
@@ -58,7 +58,7 @@
               <span
                 v-for="tech in card.tech"
                 :key="tech"
-                class="px-2 py-1 rounded-full bg-slate-800 text-slate-200"
+                class="px-2 py-1 rounded-full bg-slate-100 text-slate-700"
               >
                 {{ tech }}
               </span>
@@ -70,7 +70,7 @@
                 :href="card.link.startsWith('http') ? card.link : 'https://' + card.link"
                 target="_blank"
                 rel="noreferrer"
-                class="inline-flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-full bg-secondary text-slate-950 hover:bg-secondary/90 transition"
+                class="inline-flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-full bg-secondary text-white hover:bg-secondary/90 transition"
               >
                 Live demo
                 <ExternalLink class="w-3 h-3" />
@@ -80,7 +80,7 @@
                 :href="card.githublink"
                 target="_blank"
                 rel="noreferrer"
-                class="inline-flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-full border border-slate-600 text-slate-200 hover:border-slate-300 transition"
+                class="inline-flex items-center gap-1 text-xs font-medium px-3 py-1.5 rounded-full border border-slate-300 text-slate-700 hover:border-slate-500 transition"
               >
                 <Github class="w-3 h-3" />
                 Code

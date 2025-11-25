@@ -1,37 +1,37 @@
 <template>
-  <div class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-slate-950">
-    <div class="pointer-events-none absolute inset-0 opacity-40" aria-hidden="true">
-      <div class="absolute -top-32 -left-20 w-72 h-72 rounded-full bg-pink-500/30 blur-3xl"></div>
+  <div class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-slate-50">
+    <div class="pointer-events-none absolute inset-0 opacity-60" aria-hidden="true">
+      <div class="absolute -top-32 -left-20 w-72 h-72 rounded-full bg-pink-300/40 blur-3xl"></div>
       <div
-        class="absolute -bottom-32 -right-10 w-72 h-72 rounded-full bg-sky-500/30 blur-3xl"
+        class="absolute -bottom-32 -right-10 w-72 h-72 rounded-full bg-sky-300/40 blur-3xl"
       ></div>
     </div>
 
     <div
-      class="relative flex flex-col items-center justify-center gap-6 px-6 py-8 rounded-3xl border border-white/10 bg-slate-900/70 backdrop-blur-2xl shadow-2xl"
+      class="relative flex flex-col items-center justify-center gap-6 px-6 py-8 rounded-3xl border border-slate-200 bg-white/90 backdrop-blur-2xl shadow-2xl"
     >
       <div class="relative">
         <div
           class="w-24 h-24 rounded-full border-2 border-transparent bg-gradient-to-tr from-pink-500 via-purple-500 to-sky-500 p-[2px] animate-spin-slow"
         >
-          <div class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
-            <Loader2 class="w-7 h-7 text-secondary animate-spin" />
+          <div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+            <Loader2 class="w-7 h-7 text-primary animate-spin" />
           </div>
         </div>
 
         <div
-          class="absolute -bottom-2 -right-2 px-2 py-1 rounded-full bg-secondary text-[10px] font-semibold tracking-wide"
+          class="absolute -bottom-2 -right-2 px-2 py-1 rounded-full bg-secondary text-primary text-[10px] font-semibold tracking-wide shadow"
         >
           IG
         </div>
       </div>
 
       <div class="text-center space-y-1">
-        <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Loading portfolio</p>
-        <h1 class="text-xl font-semibold text-secondary">Inal Garali</h1>
+        <p class="text-xs uppercase tracking-[0.25em] text-slate-500">Loading portfolio</p>
+        <h1 class="text-xl font-semibold text-slate-900">Inal Garali</h1>
       </div>
 
-      <div class="w-40 h-1.5 rounded-full bg-slate-800 overflow-hidden">
+      <div class="w-40 h-1.5 rounded-full bg-slate-200 overflow-hidden">
         <div
           class="h-full rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-sky-500 animate-progress"
         ></div>
