@@ -7,11 +7,13 @@
     <div class="max-w-5xl mx-auto px-4 flex justify-between md:justify-between items-center py-2">
       <!-- logo start  -->
       <div data-navigation class="flex items-center gap-2">
-        <img
-          src="@/assets/images/logo/logo.png"
-          class="w-10 h-10 bg-secondary p-1.5 rounded-2xl shadow-lg shadow-secondary/30"
-          alt="logo"
-        />
+        <router-link to="/">
+          <img
+            src="@/assets/images/logo/logo.png"
+            class="w-10 h-10 bg-secondary p-1.5 rounded-2xl shadow-lg shadow-secondary/30"
+            alt="logo"
+          />
+        </router-link>
         <span class="hidden sm:inline text-sm font-semibold tracking-wide text-secondary">
           Inal Garali
         </span>
