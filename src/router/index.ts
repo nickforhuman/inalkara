@@ -1,5 +1,6 @@
 import ContactView from '@/views/ContactView.vue'
 import HomeView from '@/views/HomeView.vue'
+import ResumeView from '@/views/ResumeView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -14,6 +15,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: ContactView,
+    },
+    {
+      path: '/resume',
+      name: 'resume',
+      component: ResumeView,
     },
   ],
 })
