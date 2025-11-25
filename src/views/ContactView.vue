@@ -155,7 +155,7 @@
             <div
               class="w-9 h-9 rounded-xl bg-secondary flex items-center justify-center shadow shadow-secondary/40"
             >
-              <MapPin class="w-4 h-4 text-white" />
+              <MapPin class="w-4 h-4 text-primary" />
             </div>
             <div class="flex flex-col">
               <span class="text-sm text-slate-900">Based in Türkiye (UTC+3)</span>
