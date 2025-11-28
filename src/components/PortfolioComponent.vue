@@ -166,6 +166,16 @@ const projects = ref<
   }>
 >([
   {
+    image: new URL('@/assets/images/portfolio/kharybulbul.png', import.meta.url).href,
+    title: 'Kharybulbul MMC',
+    projecttype: 'Website',
+    category: 'web',
+    desc: 'A cozy chocolate café offering handcrafted musical chocolate boxes that celebrate and evoke the rich cultural heritage of Azerbaijan.',
+    tech: ['Vue.js', 'Tailwind CSS', 'Rust'],
+    link: 'https://kharybulbul.com/',
+    githublink: '#',
+  },
+  {
     image: new URL('@/assets/images/portfolio/newser.png', import.meta.url).href,
     title: 'NEWSER',
     projecttype: 'Website',
@@ -174,16 +184,6 @@ const projects = ref<
     tech: ['Vue.js', 'Tailwind CSS'],
     link: 'https://newser-k3mx.onrender.com/',
     githublink: 'https://github.com/nickforhuman/newser',
-  },
-  {
-    image: new URL('@/assets/images/portfolio/kharybulbul.png', import.meta.url).href,
-    title: 'Kharybulbul MMC',
-    projecttype: 'Mobile-friendly',
-    category: 'web',
-    desc: 'Food ordering experience optimized for mobile users with fast navigation and clear call-to-actions.',
-    tech: ['Vue.js', 'Tailwind CSS', 'Rust'],
-    link: 'https://kharybulbul.com/',
-    githublink: '#',
   },
   {
     image: new URL('@/assets/images/portfolio/kharybulbul.png', import.meta.url).href,
